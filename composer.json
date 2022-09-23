@@ -8,6 +8,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "knplabs/knp-time-bundle": "^1.19",
+        "paragonie/sodium_compat": "^1.18",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/dotenv": "6.1.*",
@@ -77,6 +78,7 @@
     },
     "require-dev": {
         "symfony/debug-bundle": "6.1.*",
+        "symfony/maker-bundle": "^1.45",
         "symfony/stopwatch": "6.1.*",
         "symfony/web-profiler-bundle": "6.1.*"
     }
