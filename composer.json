@@ -7,8 +7,17 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/doctrine-bundle": "^2.7",
+        "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/orm": "^2.13",
+        "fakerphp/faker": "^1.20",
+        "gedmo/doctrine-extensions": "^3.9",
+        "knplabs/knp-markdown-bundle": "^1.10",
         "knplabs/knp-time-bundle": "^1.19",
         "paragonie/sodium_compat": "^1.18",
+        "sensio/framework-extra-bundle": "^6.2",
+        "sentry/sentry-symfony": "^4.3",
+        "stof/doctrine-extensions-bundle": "^1.7",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/dotenv": "6.1.*",
@@ -16,6 +25,7 @@
         "symfony/framework-bundle": "6.1.*",
         "symfony/http-client": "6.1.*",
         "symfony/monolog-bundle": "^3.0",
+        "symfony/proxy-manager-bridge": "6.1.*",
         "symfony/runtime": "6.1.*",
         "symfony/twig-bundle": "6.1.*",
         "symfony/ux-turbo": "^2.0",
@@ -72,14 +82,16 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
+            "allow-contrib": true,
             "require": "6.1.*"
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "symfony/debug-bundle": "6.1.*",
         "symfony/maker-bundle": "^1.45",
         "symfony/stopwatch": "6.1.*",
-        "symfony/web-profiler-bundle": "6.1.*"
+        "symfony/web-profiler-bundle": "6.1.*",
+        "zenstruck/foundry": "^1.22"
     }
 }

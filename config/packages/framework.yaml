@@ -10,7 +10,6 @@ framework:
         handler_id: null
         cookie_secure: auto
         cookie_samesite: lax
-        storage_factory_id: session.storage.factory.native
 
     #esi: true
     #fragments: true
@@ -25,8 +24,3 @@ framework:
                     headers:
                         Authorization: 'Token %env(GITHUB_TOKEN)%'    #environment var
 
-when@test:
-    framework:
-        test: true
-        session:
-            storage_factory_id: session.storage.factory.mock_file
