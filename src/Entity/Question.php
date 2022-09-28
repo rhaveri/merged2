@@ -5,10 +5,14 @@ namespace App\Entity;
 use App\Repository\QuestionRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 #[ORM\Entity(repositoryClass: QuestionRepository::class)]
 class Question
 {
+    use TimestampableEntity; //automatically set whenever we create or update that entity
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -19,6 +23,10 @@ class Question
 
 
     #[ORM\Column(type: Types::STRING, length: 100, unique: true)]
+   /**
+   * @Gedmo\Slug(fields={"name"})
+   */
+   //slug will now be automatically set right before saving to a URL-safe version of the name property
     private ?string $slug = null;
 
     #[ORM\Column(type: Types::TEXT)]

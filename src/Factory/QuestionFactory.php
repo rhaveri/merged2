@@ -61,10 +61,11 @@ final class QuestionFactory extends ModelFactory
         // see https://github.com/zenstruck/foundry#initialization
         return $this
             ->afterInstantiate(function(Question $question) {//AFTER OBJECTS ARE INSTANTIATED FROM getDefaults()
-                if (!$question->getSlug()) {
-                    $slugger = new AsciiSlugger();
-                    $question->setSlug($slugger->slug($question->getName()));
-                }
+//before sluggable
+//                if (!$question->getSlug()) {
+//                    $slugger = new AsciiSlugger();
+//                    $question->setSlug($slugger->slug($question->getName()));
+//                }
             })
             ;
     }
